@@ -1,0 +1,57 @@
+{
+  "type": "object",
+  "properties": {
+    "result": {
+      "type": "object",
+      "additionalProperties": {
+        "x-additionalPropertiesName": "pair",
+        "title": "OrderBook",
+        "description": "Asset Pair Order Book Entries",
+        "type": "object",
+        "properties": {
+          "asks": {
+            "description": "Ask side array of entries `[<price>, <volume>, <timestamp>]`",
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "example": [
+                "3539.90000",
+                "0.801",
+                1548119951
+              ]
+            }
+          },
+          "bid": {
+            "description": "Bid side array of entries `[<price>, <volume>, <timestamp>]`",
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ],
+              "example": [
+                "3538.70000",
+                "0.798",
+                1548119924
+              ]
+            }
+          }
+        }
+      }
+    },
+    "error": {
+      "$ref": "#/paths/~1private~1Stake/post/responses/200/content/application~1json/schema/properties/error"
+    }
+  }
+}

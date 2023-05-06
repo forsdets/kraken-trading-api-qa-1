@@ -1,0 +1,5 @@
+rootProject.name = 'kraken-trading-api-qa'
+
+include 'order-api-qa'
+include 'common-lib'
+
